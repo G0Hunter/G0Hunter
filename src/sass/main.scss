@@ -16,8 +16,13 @@
         font-weight: 700;
         font-size: 60px;
     }
+    &-divider-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
     &-divider {
         width: 50%;
+        display: inline-block;
     }
     &-subtitle {
         font-size: 30px;
