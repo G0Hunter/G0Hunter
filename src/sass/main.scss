@@ -14,7 +14,7 @@
     background-color: #08071c;
     &-title {
         font-weight: 700;
-        font-size: 60px;
+        font-size: 80px;
     }
     &-divider-wrap {
         display: flex;
@@ -30,6 +30,7 @@
         color: #9c99aa;
     }
     &-ball {
+
     }
 }
 
@@ -86,8 +87,111 @@
 }
 
 
-// style for header ball 
-.slider{
-  width:500px;
-  background: rgba(0,90,50,0.7);
+// style for main-title animation
+// colors
+$white: #fff;
+
+// typography
+$text-padding: .4rem;
+$tween: 95px;
+
+// animations
+$animation-unit: 300ms;
+$slideOut: $animation-unit * 2.5;
+$slideStudios: $animation-unit * 4;
+
+.restart {
+	color: $white;
+	margin-top: 20px;
+	transition: opacity $animation-unit/2 linear;
+}
+
+.amira, 
+.capital {
+	position: relative;
+	display: inline-block;
+}
+
+.capital {
+	transform: translateX(-$tween);
+}
+
+.amira {
+	z-index: 10;
+	font-weight: 800;
+	transform: translateX($tween);
+}
+
+
+
+// Cue all the animations when run-animation class is activated
+.run-animation {
+	animation: shrink ease-out ($animation-unit * 12) forwards ($animation-unit * 2);
+	.amira {
+	transform: translateX($tween);
+	animation: slide-out-X $slideOut ease forwards;
+}
+	.capital {
+		transform: translateX(-$tween);
+		color: transparent;
+		animation: slide-out-X $slideOut ease forwards, show-text $animation-unit linear forwards ($slideOut * 1.5);
+		&:before {
+			animation: slide-out-Y $animation-unit ease forwards $slideOut;
+		}
+		&:after {
+			animation: slide-out-Y $animation-unit ease forwards $slideOut;
+		}
+	}
+	.restart {
+		opacity: 0;
+		animation: fade-down ($animation-unit * 4) ease ($animation-unit * 6) forwards;
+	}
+}
+
+
+@keyframes slide-out-X {
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-out-Y {
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes show-text {
+	100% {
+		color: $white;
+	}
+}
+
+@keyframes shrink {
+	100% {
+		transform: scale(0.8);
+	}
+}
+
+@keyframes tighten-vinette {
+	100% {
+		background-size: 120%;
+	}
+}
+
+@keyframes fade-down {
+	0% {
+		transform: translateY(-2rem);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: .5;
+	}
+}
+
+@keyframes fade-out {
+	100% {
+		opacity: 0;
+	}
 }
