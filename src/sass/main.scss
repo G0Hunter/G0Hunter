@@ -1,0 +1,89 @@
+@import "base/normalize";
+
+.main-wrap {
+    min-width: 320px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.section-main {
+    background-color: #08071c;
+    &-title {
+        font-weight: 700;
+        font-size: 60px;
+    }
+    &-divider {
+        width: 50%;
+    }
+    &-subtitle {
+        font-size: 30px;
+        font-weight: 300;
+        color: #9c99aa;
+    }
+    &-ball {
+
+    }
+}
+
+.header {
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+    }
+    &-logo {
+        width: 60px;
+    }
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        &_item {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &_link {
+            padding-right: 10px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                border-bottom: 2px solid #fff;
+                transition: .4s;
+            }
+            &:hover {
+                &::after {
+                    content: '';
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-user {
+        width: 60px;
+        height: 55px;
+        background-image: url('../images/user.png');
+        background-repeat: no-repeat;
+        background-size: 60px 55px;
+        // cursor: pointer;
+    }
+}
+
+
+// style for header ball 
+.slider{
+  width:500px;
+  background: rgba(0,90,50,0.7);
+}
