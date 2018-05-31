@@ -421,11 +421,14 @@
         
     }
     &_inner {
-        background-image: url('../images/offer_bell.png');
-        background-repeat: no-repeat;
-        background-position: center;
         height: 600px;
         position: relative;
+        #sphere{
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
     }
     &-item {
         position: absolute;

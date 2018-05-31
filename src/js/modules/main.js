@@ -149,11 +149,94 @@ $(function() {
     $('#map').addClass('active');
   })
 
-    $(".header-menu").on("click",".header-menu_link", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 800);
-    });
+  $(".header-menu").on("click",".header-menu_link", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 800);
+  });
 
 })
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       || 
+          window.webkitRequestAnimationFrame || 
+          window.mozRequestAnimationFrame    || 
+          window.oRequestAnimationFrame      || 
+          window.msRequestAnimationFrame     || 
+          function(/* function */ callback, /* DOMElement */ element){
+              window.setTimeout(callback, 1000 / 60);
+  };
+})();
+
+(function($) {
+// SCENE =========================================
+var WIDTH = 500,
+    HEIGHT = 500;
+
+// CAMERA ========================================
+var VIEW_ANGLE = 45,
+    ASPECT = WIDTH / HEIGHT,
+    NEAR = 0.1,
+    FAR = 10000;
+
+// CANVAS INJECTED CONTAINER =====================
+var $container = $( '#sphere' );
+
+// THREE.JS SET UP ===============================
+var renderer = new THREE.WebGLRenderer({
+  alpha: true
+});
+renderer.setClearColor( 0xffffff, 0 );
+var camera = 
+    new THREE.PerspectiveCamera(
+          VIEW_ANGLE,
+          ASPECT,
+          NEAR,
+          FAR);
+
+var scene = new THREE.Scene();
+
+// Additional settings ===========================
+camera.position.z = 150;
+renderer.setSize( WIDTH, HEIGHT );
+
+// SPHERE MESH ===============================
+var radius = 50,
+    segments = 15,
+    rings = 10;
+
+var sphereMaterial = 
+    new THREE.MeshBasicMaterial(
+      {
+      color: 0x655a9e,
+            wireframe: true
+        }
+    );
+
+var sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(
+      radius,
+      segments,
+      rings),    
+    sphereMaterial
+);
+scene.add( sphere );
+
+// RENDER 
+$container.append( renderer.domElement );
+
+// Render Function
+var render = function () {
+    requestAnimationFrame( render );
+
+    // Rotation Animation
+    sphere.rotation.y += .001;
+    sphere.rotation.z += .0002;
+
+    //Render Initialize
+    renderer.render( scene, camera );
+};
+
+render();
+})(jQuery);
