@@ -1,5 +1,6 @@
 $(function() {
 
+    $(".my-element").paroller({ factor: '0.9', type: 'foreground', direction: 'vertical' });
     $('.owl-carousel').owlCarousel();
     //animation on main block spiderweb
     particlesJS('particles-js',
