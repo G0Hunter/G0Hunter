@@ -115,12 +115,14 @@
                         <div class="footer-form">
                             <form>
                                 <input class="footer-form_input" type="name" name="name" placeholder="Full Name*" required>
-                                <input class="footer-form_input" type="name" name="name" placeholder="Full Name*" required>
-                                <input class="footer-form_input" type="name" name="name" placeholder="Full Name*" required>
-                                <input class="footer-form_input" type="name" name="name" placeholder="Full Name*" required>
+                                <input class="footer-form_input" type="email" name="email" placeholder="Email*" required>
+                                <input class="footer-form_input" type="text" name="subject" placeholder="Subject*" required>
+                                <textarea class="footer-form_input" type="name" name="name" placeholder="Message*" required></textarea>
                             </form>
                         </div>
                     </div>
+                </div>
+                <div id="map">
                 </div>
                 <div class="footer-copyright">
                     Amira Capital (c) 2018. All right reserved
@@ -129,7 +131,22 @@
     </div>
 
 
-    <!-- scripts -->
+<!-- scripts -->
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV1HmUasMdixy44U4J3koslRHY1hk5TLc&callback=initMap"></script>
 <script type="text/javascript" src="public/js/libs.min.js"></script>
 <script type="text/javascript" src="public/js/main.min.js"></script>
 </body>
