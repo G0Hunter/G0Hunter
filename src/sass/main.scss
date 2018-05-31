@@ -813,12 +813,14 @@ $slideStudios: $animation-unit * 4;
 	.amira {
         transform: translateX($tween);
         animation: slide-out-X $slideOut ease forwards;
+        animation-delay: 1.2s;
     }
 	.capital {
 		transform: translateX(-$tween);
 		color: transparent;
 		animation: slide-out-X $slideOut ease forwards, show-text $animation-unit linear forwards ($slideOut * 1.5);
-		&:before {
+        animation-delay: 2s;
+        &:before {
 			animation: slide-out-Y $animation-unit ease forwards $slideOut;
 		}
 		&:after {
@@ -827,7 +829,8 @@ $slideStudios: $animation-unit * 4;
 	}
 	.restart {
 		opacity: 0;
-		animation: fade-down ($animation-unit * 4) ease ($animation-unit * 6) forwards;
+        animation: fade-down ($animation-unit * 4) ease ($animation-unit * 6) forwards;
+        animation-delay: 2.4s;
 	}
 }
 
