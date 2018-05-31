@@ -389,6 +389,9 @@
 
 // Press about us
 .section-rewiews{
+    .owl-carousel .owl-stage{
+        padding: 20px 0;
+    }
     color: #08071c;
     &_title{
         text-align: center;
@@ -408,6 +411,7 @@
         display: flex;
         justify-content: space-between;
         &-item{
+            max-width: 450px;
             display: inline-flex;
             flex-direction: column;
         }
@@ -433,8 +437,29 @@
         }
     }
     &_slider_controls{
+        justify-content: center;
         margin-bottom: 70px;
         display: flex;
+        .owl-dot{
+            border-radius: 100%;
+            width: 13px;
+            height: 13px;
+            border: 0;
+            background-color: #08071c;
+            margin: 0 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+            &.active{
+                width: 35px;
+                height: 35px;
+                margin-top: calc((-35px / 2) + 7.5px);
+                background-color: #5c5ba2;
+            }
+            &:hover,&:focus,&:active{
+                outline: 0;
+                outline-offset: 0;
+            }
+        }
     }
 }
 
@@ -452,6 +477,24 @@
         top: 0;
         background-color: rgba(8,7,28,.9);
     }
+    .container{
+        position: relative;
+    }
+    &_slider_controls{
+        position: absolute;
+        right: 40px;
+        top: 50px;
+        z-index: 3;
+        button{
+            width: 30px;
+            height: 30px;
+            line-height: 20px;
+            background-color: transparent;
+            border: 1px solid #868690;
+            color: #fff;
+            margin-left: 5px;
+        }
+    }
     &-wrapper{
         position: relative;
         z-index: 2;
@@ -461,6 +504,10 @@
     &-item{
         display: flex;
         margin: 100px auto;
+    }
+    &-item_image img{
+        width: 100%;
+        height: 100%;
     }
     &-item_image,
     &-item_info
@@ -473,9 +520,14 @@
         padding-left: 30px;
         border-left: 2px solid;
         &_title{
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
             letter-spacing: .02em;
+            margin-bottom: 20px;
+        }
+        &_description{
+            font-size: 16px;
+            line-height: 25px;
         }
     }
 }
@@ -690,7 +742,7 @@ $slideStudios: $animation-unit * 4;
 
 // style for button
 $thick : 3px;
-$pad : 5px;
+$pad : 4px;
 $extra : calc(#{$pad} * 1.2);
 $color : #688cc2;
 
