@@ -61,6 +61,9 @@
         padding-right: 50px;
         margin-top: 70px;
         display: inline-block;
+        span {
+            color: #fff;
+        }
     }
 }
 
@@ -218,6 +221,9 @@
             margin-top: 50px;
             &_link {
                 margin-top: 60px;
+                span {
+                    color: #000;
+                }
                 a {
                     font-weight: 700;
                     color: #000;
@@ -724,7 +730,7 @@ $color : #688cc2;
       left: 15px;
       width: 100%;
       height: $thick;
-      background: linear-gradient(to right, #685a9e, #6689c0);
+      background: linear-gradient(to right, #685a9e, #678bc1);
       // z-index: -1;
       transition: 
         transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
@@ -737,7 +743,7 @@ $color : #688cc2;
 
 .line{
     position: absolute;
-    background: linear-gradient(to right, #685a9e, #6689c0);;
+    background: linear-gradient(to right, #685a9e, #678bc1);;
     width: 100%;
 
     &.-right,
