@@ -286,13 +286,40 @@
     color: #000;
     &_title {
         text-align: center;
-        margin-bottom: 120px;
         width: 510px;
         margin: 0 auto;
+        margin-bottom: 120px;
+    }
+    &-column-stat {
+        margin-left: 140px;
+    }
+    &-column-stat-item {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        &.active {
+            background-color: #52cbe2;
+            color: #fff;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .percent {
+            font-weight: 700;
+            margin-right: 20px;
+            min-width: 40px
+        }
+        .label {
+            text-transform: uppercase;
+        }
+    }
+    &-info {
+        display: flex;
+        justify-content: center;
     }
     img {
-        width: 400px;
-        height: 300px;
+        width: 450px;
+        height: 400px;
     }
 }
 .section-advantage {
