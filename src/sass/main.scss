@@ -318,9 +318,16 @@
         display: flex;
         justify-content: center;
     }
-    img {
-        width: 450px;
-        height: 400px;
+    &-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            max-width: 80%;
+        }
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../images/figure_graph.png');
     }
 }
 .section-advantage {
@@ -636,6 +643,7 @@
     flex-direction: column;
     position: relative;
     height: 540px;
+    padding-bottom: 20px;
     &-inner{
         display: flex;
         background-color: #fff;
@@ -749,7 +757,7 @@
         }
     }
     #map{
-        height: 540px;
+        height: 560px;
         position: absolute !important;
         width: 100%;
         z-index: -1;
