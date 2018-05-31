@@ -724,7 +724,7 @@ $color : #688cc2;
       left: 15px;
       width: 100%;
       height: $thick;
-      background: $color;
+      background: linear-gradient(to right, #685a9e, #6689c0);
       // z-index: -1;
       transition: 
         transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
@@ -737,7 +737,7 @@ $color : #688cc2;
 
 .line{
     position: absolute;
-    background: $color;
+    background: linear-gradient(to right, #685a9e, #6689c0);;
     width: 100%;
 
     &.-right,
