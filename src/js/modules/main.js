@@ -1,6 +1,5 @@
 $(function() {
 
-
     //animation on main block spiderweb
     particlesJS('particles-js',
   
