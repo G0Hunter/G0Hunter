@@ -10,6 +10,11 @@ $(function() {
       dots: false,
       navContainer: '.section-slider_slider_controls',
     });
+    $('#project_slider').owlCarousel({
+      items: 1,
+      nav: true,
+      dots: false
+    });
     $(".my-element").paroller({ factor: '0.9', type: 'foreground', direction: 'vertical' });
     //animation on main block spiderweb
     particlesJS('particles-js',

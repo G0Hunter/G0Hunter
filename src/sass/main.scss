@@ -173,6 +173,9 @@
                 background-repeat: no-repeat;
             }
         }
+        &_slider{
+            position: relative;
+        }
         &-info {
             max-width: 600px;
             margin-top: 50px;
@@ -190,9 +193,9 @@
                 line-height: 30px;
             }
         }
+
     }
 }
-
 .section-about-us {
     color: #000;
     padding-bottom: 100px;
@@ -493,6 +496,11 @@
             border: 1px solid #868690;
             color: #fff;
             margin-left: 5px;
+            cursor: pointer;
+            &:hover,&:focus,&:active{
+                outline: 0;
+                outline-offset: 0;
+            }
         }
     }
     &-wrapper{
@@ -746,7 +754,10 @@ $pad : 4px;
 $extra : calc(#{$pad} * 1.2);
 $color : #688cc2;
 
-
+form .btn_wrapper{
+    margin-left: 25px;
+    margin-top: 10px;
+}
 .btn_wrapper.white{
     color: #fff;
 }
