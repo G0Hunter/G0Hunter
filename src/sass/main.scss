@@ -238,6 +238,48 @@
     }
 }
 
+// Slider
+.slider{
+    position: relative;
+    background-image: url(../images/slider_background.jpg);
+    background-position: center;
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(8,7,28,.9);
+    }
+    &-wrapper{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        padding: 0 20px;
+    }
+    &-item{
+        display: flex;
+        margin: 100px auto;
+    }
+    &-item_image,
+    &-item_info
+    {
+        display: inline-flex;
+        flex-direction: column;
+    }
+    &-item_info{
+        margin-left: 30px;
+        padding-left: 30px;
+        border-left: 2px solid;
+        &_title{
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: .02em;
+        }
+    }
+}
+
 // style for main-title animation
 // colors
 $white: #fff;
@@ -345,124 +387,138 @@ $slideStudios: $animation-unit * 4;
 }
 
 // style for button
-$pad : 0.7em;
-$extra :0;
 $thick : 3px;
-$color : #f26522;
-.link-wrap {
-    a {
-        padding-bottom: 10px;
-        padding-top: 10px;
-      .text {
+$pad : 5px;
+$extra : calc(#{$pad} * 1.2);
+$color : #688cc2;
+
+
+.btn_wrapper.white{
+    color: #fff;
+}
+.btn_wrapper{
+    color: #000;
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    align-self: flex-start;
+
+    .text {
+        font-family: Montserrat, sans-serif;
         transform: translate3d(0,$pad,0);
+        display: block;
         transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
-      }
-  
-      &:after {
-        position: absolute;
-        content: '';
-        bottom: -$thick;
-        left: $extra;
-        right: $extra;
-        height: $thick;
-        background: $color;
-        // z-index: -1;
-        transition: 
-          transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
-          right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
-          left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
-        transform-origin: left;
-      }
-  
+        padding: 10px;
     }
-  
-    .line {
+
+    &:after {
       position: absolute;
+      content: '';
+      bottom: -$thick;
+      left: $extra;
+      right: $extra;
+      height: $thick;
       background: $color;
-  
-      &.-right,
-      &.-left {
+      // z-index: -1;
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+
+}
+
+.line{
+    position: absolute;
+    background: $color;
+    width: 100%;
+
+    &.-right,
+    &.-left {
         width: $thick;
         bottom: -$thick;
         top: -$thick;
         transform: scale3d(1,0,1);
-      }  
-  
-      &.-top,
-      &.-bottom {
+    }  
+
+    &.-top,
+    &.-bottom {
         height: $thick;
         left: -$thick;
         right: -$thick;
         transform: scale3d(0,1,1);
-      }
-  
-      &.-right {
-        right: -$thick;
+    }
+
+    &.-right {
+        right: 0;
         transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
         transform-origin: top;
-      }
-  
-      &.-top {
+    }
+
+    &.-top {
         top: -$thick;
         transition: transform 0.08s linear 0.43s;
         transform-origin: left;
-      }
-  
-      &.-left {
+    }
+
+    &.-left {
         left: -$thick;
         transition: transform 0.08s linear 0.51s;
         transform-origin: bottom;
-      }
-  
-      &.-bottom {
+    }
+
+    &.-bottom {
         bottom: -$thick;
         transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
         transform-origin: right;
-      }  
-    }
-  
-    a:hover,
-    a:active {
-  
-      .text {
-        transform: translate3d(10px,10px,0);
+    }  
+}
+
+.btn_wrapper:hover,
+.btn_wrapper:active {
+
+    .text {
+        transform: translate3d(0,0,0);
         transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
-      }
-  
-      &:after {
+    }
+
+    &:after {
         transform: scale3d(0,1,1);
         right: -$thick;
         left: -$thick;
         transform-origin: right;
         transition: 
-          transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
-          right 0.2s cubic-bezier(1,0,.65,1.01),
-          left 0s 0.3s;
-      }
-  
-      .line {
+            transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+            right 0.2s cubic-bezier(1,0,.65,1.01),
+            left 0s 0.3s;
+    }
+
+    .line {
         transform: scale3d(1,1,1);
-  
+
         &.-right {
           transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
           transform-origin: bottom;
         }
-  
+
         &.-top {
           transition: transform 0.08s linear 0.4s;
           transform-origin: right;
         }
-  
+
         &.-left {
           transition: transform 0.08s linear 0.48s;
           transform-origin: top;
         }
-  
+
         &.-bottom {
           transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
           transform-origin: left;
         }
-      }
-  
     }
-  }
+
+}
