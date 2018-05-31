@@ -440,6 +440,7 @@
         justify-content: center;
         margin-bottom: 70px;
         display: flex;
+        min-height: 35px;
         .owl-dot{
             border-radius: 100%;
             width: 13px;
@@ -453,7 +454,7 @@
                 width: 35px;
                 height: 35px;
                 margin-top: calc((-35px / 2) + 7.5px);
-                background-color: #5c5ba2;
+                background: linear-gradient(to top, #6e5a9e, #678bc1);
             }
             &:hover,&:focus,&:active{
                 outline: 0;
