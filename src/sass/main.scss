@@ -155,14 +155,42 @@
 .section-project {
     color: #000;
     padding-top: 350px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     background-image: url('../images/about-proj_bg.png');
     margin-top: -275px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top -354px;
     .owl-carousel {
-        width: 500px;
+        width: 470px;
+    }
+    .owl-carousel_wrapper {
+        position: relative;
+    }
+    .owl-nav {
+        position: absolute;
+        transform: rotate(-58deg);
+        font-size: 36px;
+        right: 80px;
+        top: 230px;
+        .owl-prev {
+            margin-right: 15px;
+        }
+        .owl-prev,
+        .owl-next {
+            outline: none;
+        }
+    }
+    .owl_items-num-color  {
+        color: #6e5a9e;
+    }
+    .owl_items-num {
+        position: absolute;
+        right: 103px;
+        font-weight: 600;
+        top: 280px;
+        z-index: 2;
+        transform: rotate(-58deg);
     }
     &_items {
         display: flex;
@@ -208,7 +236,7 @@
 }
 .section-about-us {
     color: #000;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     &_items {
         display: flex;
         justify-content: space-between;
@@ -339,7 +367,7 @@
 .section-offer {
     color: #000;
     background-image: url('../images/offer_bg.png');
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     background-repeat: no-repeat;
     background-size: contain;
     &-title {

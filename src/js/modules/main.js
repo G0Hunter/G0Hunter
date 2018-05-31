@@ -14,12 +14,19 @@ $(function() {
         items: 1,
         nav: true,
         dots: false,
-        autoWidth:false
+        autoWidth:false,
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX'
     });
+    $('#topItemsSlider').on('changed.owl.carousel', function(e) {
+        $('.owl_items-num-color').text((e.item.index+1));
+        $('.owl_items-num-inherit').text('/' + e.item.count);
+    })
+    
     $(".parallax-rewiews").paroller({ factor: '-0.1', type: 'foreground', direction: 'vertical' });
     $(".parallax-about-us").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
     $(".parallax-offer").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
-    $(".parallax-project").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
+    $(".parallax-project").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
     //animation on main block spiderweb
     particlesJS('particles-js',
   
