@@ -908,6 +908,7 @@ $color : #688cc2;
 
 // annimation title 
 $target: #000;
+$targetwhite: #fff;
 .common-title {
     position: relative;
 .focus {
@@ -959,6 +960,15 @@ $target: #000;
     animation: about-us-mask 2.5s ease infinite alternate;
 }
 .advantage-mask {
+    background: linear-gradient($targetwhite, $targetwhite 0) no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) bottom left no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) bottom left no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) bottom right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) bottom right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) top right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) top right no-repeat;
+    background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
     color: #fff;
     animation: advantage-mask 2.5s ease infinite alternate;
 }

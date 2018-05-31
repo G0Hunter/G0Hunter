@@ -139,4 +139,12 @@ $(function() {
     $('.footer-inner').addClass('hidden');
     $('#map').addClass('active');
   })
+
+    $(".header-menu").on("click",".header-menu_link", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+
 })
