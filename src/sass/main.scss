@@ -642,20 +642,17 @@
     &_inner {
         height: 600px;
         position: relative;
-<<<<<<< HEAD
         @media screen and (max-width:980px) {
             background-image: none;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 40px;
-=======
         #sphere{
             position: absolute;
             left: 0;
             right: 0;
             text-align: center;
->>>>>>> e302d69f9f2b43603f6734bd7ef6af5921856d46
         }
     }
     &-item {
