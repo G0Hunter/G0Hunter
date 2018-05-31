@@ -487,7 +487,7 @@
 
 // Press about us
 .section-rewiews{
-    .owl-carousel .owl-stage{
+    .owl-carousel .owl-stage {
         padding: 20px 0;
     }
     color: #08071c;
@@ -566,8 +566,9 @@
 // Slider
 .section-slider {
     position: relative;
-    background-image: url(../images/slider_background.jpg);
+    background-image: url(../images/slider_background.jpg); 
     background-position: center;
+    background-attachment: fixed;
     &:after{
         content: '';
         display: block;
@@ -605,6 +606,7 @@
         z-index: 2;
         display: flex;
         padding: 0 20px;
+        
     }
     &-item{
         display: flex;
