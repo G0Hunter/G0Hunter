@@ -1,4 +1,5 @@
 $(function() {
+
     $('.owl-carousel').owlCarousel();
     //animation on main block spiderweb
     particlesJS('particles-js',
