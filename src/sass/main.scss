@@ -360,6 +360,52 @@
         background-repeat: no-repeat;
         background-size: contain;
         cursor: pointer;
+        &_hover-line{
+            position: absolute;
+            pointer-events: none;
+            .vertical-line{
+                width: 2px;
+                height: 0;
+                background-color: #5f5e6a;
+                transition: all 0.3s;
+            }
+            .horizontal-line{
+                height: 2px;
+                width: 0;
+                background-color: #5f5e6a;
+                transition: all 0.3s 0.3s;
+            }
+        }
+        &:nth-child(1){
+            .section-advantage-item_hover-line{
+                top: 182px;
+                left: 105px;
+            }
+        }
+        &:nth-child(2){
+            .section-advantage-item_hover-line{
+                top: 275px;
+                left: 340px;
+            }
+        }
+        &:nth-child(3){
+            .section-advantage-item_hover-line{
+                left: 580px;
+                top: 185px;
+            }
+        }
+        &:nth-child(4){
+            .section-advantage-item_hover-line{
+                top: 275px;
+                left: 810px;
+            }
+        }
+        &:nth-child(5){
+            .section-advantage-item_hover-line{
+                top: 185px;
+                left: 1045px;
+            }
+        }
         &-text {
             position: absolute;
             width: 600px;
@@ -372,11 +418,64 @@
             overflow: hidden;
         }
         &:hover {
+            .horizontal-line{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #5f5e6a;
+                    -webkit-border-radius: 100%;
+                    border-radius: 100%;
+                    right: -5px;
+                    margin-top: -3px;
+                }
+            }
             .section-advantage-item-text {
                 max-height: 100px;
                 opacity: 1;
                 transition: 0.4s;
                 overflow: visible;
+            }
+            &:nth-child(1){
+                .vertical-line{
+                    height: 245px;
+                }
+                .horizontal-line{
+                    width: 420px;
+                }
+            }
+            &:nth-child(2){
+                .vertical-line{
+                    height: 152px;
+                }
+                .horizontal-line{
+                    width: 185px;
+                }
+            }
+            &:nth-child(3){
+                .vertical-line{
+                    height: 180px;
+                }
+                .horizontal-line{
+                    width: 0;
+                }
+            }
+            &:nth-child(4){
+                .vertical-line{
+                    height: 95px;
+                }
+                .horizontal-line{
+                    width: 0;
+                }
+            }
+            &:nth-child(5){
+                .vertical-line{
+                    height: 178px;
+                }
+                .horizontal-line{
+                    width: 0;
+                }
             }
         }
         &:nth-child(even) {
