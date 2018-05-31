@@ -61,6 +61,9 @@
         padding-right: 50px;
         margin-top: 70px;
         display: inline-block;
+        span {
+            color: #fff;
+        }
     }
 }
 
@@ -218,6 +221,9 @@
             margin-top: 50px;
             &_link {
                 margin-top: 60px;
+                span {
+                    color: #000;
+                }
                 a {
                     font-weight: 700;
                     color: #000;
@@ -240,6 +246,8 @@
     &_title {
         text-align: center;
         margin-bottom: 120px;
+        width: 510px;
+        margin: 0 auto;
     }
     img {
         width: 400px;
@@ -253,6 +261,8 @@
     &_title {
         font-weight: 700;
         text-align: center;
+        width: 370px;
+        margin: 0 auto;
     }
     &_subtext {
         max-width: 500px;
@@ -301,12 +311,15 @@
     &-title {
         text-align: center;
         margin-bottom: 45px;
+        max-width: 492px;
+        margin: 0 auto;
     }
     &-subtext {
         max-width: 500px;
         text-align: center;
         margin: 0 auto;
         line-height: 2;
+        
     }
     &_inner {
         background-image: url('../images/offer_bell.png');
@@ -382,9 +395,9 @@
     color: #08071c;
     &_title{
         text-align: center;
-        text-transform: uppercase;
-        font-weight: 600;
         margin-bottom: 25px;
+        margin: 0 auto;
+        width: 330px;
     }
     &_subtitle{
         color: #afb3c9;
@@ -769,7 +782,7 @@ $color : #688cc2;
       left: 15px;
       width: 100%;
       height: $thick;
-      background: $color;
+      background: linear-gradient(to right, #685a9e, #678bc1);
       // z-index: -1;
       transition: 
         transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
@@ -782,7 +795,7 @@ $color : #688cc2;
 
 .line{
     position: absolute;
-    background: $color;
+    background: linear-gradient(to right, #685a9e, #678bc1);;
     width: 100%;
 
     &.-right,
@@ -870,3 +883,159 @@ $color : #688cc2;
     }
 
 }
+
+// annimation title 
+$target: #000;
+.common-title {
+    position: relative;
+.focus {
+  filter: blur(3px);
+  opacity: 0.6;
+  color: #000;
+}
+.advantage-focus {
+    color: #fff;
+}
+.mask,
+.offer-mask,
+.about-us-mask,
+.graph-mask,
+.advantage-mask,
+.rewiews-mask {
+    white-space: nowrap;
+  position: absolute;
+  left: -5px;
+  top: -6px;
+  width: 70px;
+  font-size: 40px;
+  clip: rect(0px,70px,75px,0px);
+  background: linear-gradient($target, $target 0) no-repeat,
+    linear-gradient(to right, $target, $target 0) no-repeat,
+    linear-gradient(to right, $target, $target 0) bottom left no-repeat,
+    linear-gradient(to right, $target, $target 0) bottom left no-repeat,
+    linear-gradient($target, $target 0) bottom right no-repeat,
+    linear-gradient($target, $target 0) bottom right no-repeat,
+    linear-gradient($target, $target 0) top right no-repeat,
+    linear-gradient($target, $target 0) top right no-repeat;
+  background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
+  color: #000;
+  padding: 5px;
+  transform: translateX(0);
+  box-sizing: border-box;
+  
+}
+.mask {
+    animation: mask 2.5s ease infinite alternate;
+}
+.offer-mask {
+    animation: offer-mask 3.5s ease infinite alternate;
+}
+.graph-mask {
+    animation: graph-mask 2.5s ease infinite alternate;
+}
+.about-us-mask {
+    animation: about-us-mask 2.5s ease infinite alternate;
+}
+.advantage-mask {
+    color: #fff;
+    animation: advantage-mask 2.5s ease infinite alternate;
+}
+.advantage-text {
+    transform: translateX(0);
+    animation: advantage-text 2.5s ease infinite alternate;
+}
+.rewiews-mask {
+    animation: rewiews-mask 2.5s ease infinite alternate;
+}
+.rewiews-text {
+    transform: translateX(0);
+    animation: rewiews-text 2.5s ease infinite alternate;
+}
+.graph-text {
+    transform: translateX(0);
+    animation: graph-text 2.5s ease infinite alternate;
+  }
+.text {
+  transform: translateX(0);
+  animation: text 2.5s ease infinite alternate;
+}
+.about-us-text {
+    transform: translateX(0);
+    animation: about-us-text 2.5s ease infinite alternate;
+}
+.offer-text {
+    transform: translateX(0);
+    animation: offer-text 3.5s ease infinite alternate;
+}
+
+@keyframes mask {
+  to {
+    transform: translateX(190px);
+  }
+}
+@keyframes graph-mask {
+    to {
+      transform: translateX(450px);
+    }
+}
+@keyframes graph-text {
+    to {
+      transform: translateX(-450px);
+    }
+}
+@keyframes rewiews-mask {
+    to {
+      transform: translateX(280px);
+    }
+}
+  
+@keyframes rewiews-text {
+    to {
+      transform: translateX(-280px);
+    }
+}
+
+@keyframes advantage-mask {
+    to {
+      transform: translateX(330px);
+    }
+}
+  
+@keyframes advantage-text {
+    to {
+      transform: translateX(-330px);
+    }
+}
+
+@keyframes about-us-mask {
+    to {
+      transform: translateX(90px);
+    }
+}
+@keyframes about-us-text {
+    to {
+      transform: translateX(-90px);
+    }
+}
+@keyframes offer-mask {
+    to {
+      transform: translateX(450px);
+    }
+}
+@keyframes offer-text {
+    to {
+      transform: translateX(-450px);
+    }
+}
+@keyframes text {
+  to {
+    transform: translateX(-190px);
+  }
+}
+
+}
+
+
+
+
+

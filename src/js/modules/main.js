@@ -1,4 +1,5 @@
 $(function() {
+<<<<<<< HEAD
     $('#twoItemsSlider').owlCarousel({
       items: 2,
       dotsContainer: '.section-rewiews_slider_controls',
@@ -10,6 +11,11 @@ $(function() {
       dots: false,
       navContainer: '.section-slider_slider_controls',
     });
+=======
+
+    $(".my-element").paroller({ factor: '0.9', type: 'foreground', direction: 'vertical' });
+    $('.owl-carousel').owlCarousel();
+>>>>>>> 25e63bf70881bcab44e43fa8be325ddeb4684efa
     //animation on main block spiderweb
     particlesJS('particles-js',
   
@@ -85,11 +91,11 @@ $(function() {
         "detect_on": "canvas",
         "events": {
           "onhover": {
-            "enable": true,
+            "enable": false,
             "mode": "repulse"
           },
           "onclick": {
-            "enable": true,
+            "enable": false,
             "mode": "push"
           },
           "resize": true
