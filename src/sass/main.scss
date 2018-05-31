@@ -333,8 +333,26 @@
     }
 }
 
+// Section rewiews
+.section-rewiews{
+    color: #08071c;
+    &_title{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    &_subtitle{
+        color: #afb3c9;
+        text-align: center;
+        width: 400px;
+        margin: auto;
+        line-height: 20px;
+    }
+}
+
 // Slider
-.slider{
+.section-slider{
     position: relative;
     background-image: url(../images/slider_background.jpg);
     background-position: center;
