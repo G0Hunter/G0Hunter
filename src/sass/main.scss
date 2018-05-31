@@ -11,9 +11,19 @@
 }
 
 .section-main {
-    
-    background-color: #08071c;
     position: relative;
+    transform-origin: left center;
+    filter: drop-shadow(0px 10px 5px rgba(0,0,0,0.5));
+    &-wrap {
+        background-color: #08071c;
+        clip-path: polygon(-121% 0,100% 0%,100% 75%,30% 100%);
+    }
+    &_inner {
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+       
+    }
     &-title {
         font-weight: 700;
         font-size: 60px;
@@ -22,6 +32,7 @@
         display: flex;
         justify-content: space-between;
         margin-top: 165px;
+        margin-bottom: 200px;
     }
     &-divider {
         width: 50%;
