@@ -161,18 +161,23 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top -354px;
+    .owl-carousel {
+        width: 500px;
+    }
     &_items {
         display: flex;
         justify-content: space-between;
         &_slider-img {
             position: relative;
+            width: 400px;
+            height: 400px;
             &_shadow {
                 position: absolute;
                 top: 40px;
                 right: -70px;
                 z-index: -1;
-                width: 450px;
-                height: 450px;
+                width: 400px;
+                height: 400px;
                 background-image: url('../images/shadow_figure.png');
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -280,6 +285,8 @@
     &-items {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 200px;
+        position: relative;
     }
     &-item {
         width: 220px;
@@ -287,6 +294,25 @@
         background-repeat: no-repeat;
         background-size: contain;
         cursor: pointer;
+        &-text {
+            position: absolute;
+            width: 600px;
+            bottom: -180px;
+            right: 0;
+            line-height: 2;
+            opacity: 0;
+            transition: 0.4s;
+            max-height: 0;
+            overflow: hidden;
+        }
+        &:hover {
+            .section-advantage-item-text {
+                max-height: 100px;
+                opacity: 1;
+                transition: 0.4s;
+                overflow: visible;
+            }
+        }
         &:nth-child(even) {
             margin-top: 90px;
         }
@@ -320,9 +346,11 @@
         margin: 0 auto;
     }
     &-subtext {
-        max-width: 500px;
+        max-width: 460px;
         text-align: center;
         margin: 0 auto;
+        font-size: 16px;
+        margin-top: 40px;
         line-height: 2;
         
     }
@@ -469,7 +497,7 @@
 }
 
 // Slider
-.section-slider{
+.section-slider {
     position: relative;
     background-image: url(../images/slider_background.jpg);
     background-position: center;
@@ -610,6 +638,17 @@
         text-align: center;
         color: #08071c;
         flex: 0 0 auto;
+    }
+    .btn_send_form {
+        margin-top: 38px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+    .btn_close_form {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 20px;
     }
     &-form{
         width: 55%;

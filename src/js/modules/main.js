@@ -10,6 +10,12 @@ $(function() {
       dots: false,
       navContainer: '.section-slider_slider_controls',
     });
+    $('#topItemsSlider').owlCarousel({
+        items: 1,
+        nav: true,
+        dots: false,
+        autoWidth:false
+    });
     $(".parallax-rewiews").paroller({ factor: '-0.1', type: 'foreground', direction: 'vertical' });
     $(".parallax-about-us").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
     $(".parallax-offer").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
