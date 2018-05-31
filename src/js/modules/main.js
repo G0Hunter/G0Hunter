@@ -1,5 +1,15 @@
 $(function() {
-    $('.owl-carousel').owlCarousel();
+    $('#twoItemsSlider').owlCarousel({
+      items: 2,
+      dotsContainer: '.section-rewiews_slider_controls',
+      startPosition: 2,
+    });
+    $('#oneItemSlider').owlCarousel({
+      items: 1,
+      nav: true,
+      dots: false,
+      navContainer: '.section-slider_slider_controls',
+    });
     //animation on main block spiderweb
     particlesJS('particles-js',
   
