@@ -10,12 +10,19 @@ $(function() {
       dots: false,
       navContainer: '.section-slider_slider_controls',
     });
+<<<<<<< HEAD
     $('#project_slider').owlCarousel({
       items: 1,
       nav: true,
       dots: false
     });
     $(".my-element").paroller({ factor: '0.9', type: 'foreground', direction: 'vertical' });
+=======
+    $(".parallax-rewiews").paroller({ factor: '-0.1', type: 'foreground', direction: 'vertical' });
+    $(".parallax-about-us").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
+    $(".parallax-offer").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
+    $(".parallax-project").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
+>>>>>>> 2768852a6758c459f38f56013ea0fa1d6bc937da
     //animation on main block spiderweb
     particlesJS('particles-js',
   
@@ -135,6 +142,18 @@ $(function() {
         "background_size": "cover"
       }
     }
-  
   );
+
+  $('.btn_close_form').on('click', function() {
+    $('.footer-inner').addClass('hidden');
+    $('#map').addClass('active');
+  })
+
+    $(".header-menu").on("click",".header-menu_link", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+
 })

@@ -3,13 +3,18 @@
 .main-wrap {
     min-width: 320px;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .container {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
 }
-
+.content-wrap {
+    flex: 1 0 auto;
+}
 .section-main {
     position: relative;
     transform-origin: left center;
@@ -329,7 +334,6 @@
         background-repeat: no-repeat;
         background-position: center;
         height: 600px;
-        margin-top: 70px;
         position: relative;
     }
     &-item {
@@ -443,6 +447,7 @@
         justify-content: center;
         margin-bottom: 70px;
         display: flex;
+        min-height: 35px;
         .owl-dot{
             border-radius: 100%;
             width: 13px;
@@ -456,7 +461,7 @@
                 width: 35px;
                 height: 35px;
                 margin-top: calc((-35px / 2) + 7.5px);
-                background-color: #5c5ba2;
+                background: linear-gradient(to top, #6e5a9e, #678bc1);
             }
             &:hover,&:focus,&:active{
                 outline: 0;
@@ -544,6 +549,8 @@
 .footer{
     display: flex;
     flex-direction: column;
+    position: relative;
+    height: 540px;
     &-inner{
         display: flex;
         background-color: #fff;
@@ -551,6 +558,15 @@
         width: 1000px;
         margin: 45px auto;
         box-shadow: 0px 0px 31.16px 6.84px rgba(0, 0, 0, 0.33);
+        transition: 0.8s;
+        &.hidden {
+            transition: 0.4s;
+            opacity: 0;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            padding: 0;
+        }
     }
     &-feedback{
         display: inline-flex;
@@ -601,6 +617,7 @@
         line-height: 65px;
         text-align: center;
         color: #08071c;
+        flex: 0 0 auto;
     }
     &-form{
         width: 55%;
@@ -635,10 +652,15 @@
         }
     }
     #map{
-        height: 550px;
+        height: 540px;
         position: absolute !important;
         width: 100%;
         z-index: -1;
+        transition: 0.8s;
+        &.active {
+            transition: 0.8s;
+            z-index: 1;
+        }
     }
 }
 
@@ -897,6 +919,7 @@ form .btn_wrapper{
 
 // annimation title 
 $target: #000;
+$targetwhite: #fff;
 .common-title {
     position: relative;
 .focus {
@@ -948,6 +971,15 @@ $target: #000;
     animation: about-us-mask 2.5s ease infinite alternate;
 }
 .advantage-mask {
+    background: linear-gradient($targetwhite, $targetwhite 0) no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) bottom left no-repeat,
+    linear-gradient(to right, $targetwhite, $targetwhite 0) bottom left no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) bottom right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) bottom right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) top right no-repeat,
+    linear-gradient($targetwhite, $targetwhite 0) top right no-repeat;
+    background-size: 10px 2px, 2px 10px, 2px 10px, 10px 2px, 2px 10px, 10px 2px, 10px 2px, 2px 10px, 10px 2px;
     color: #fff;
     animation: advantage-mask 2.5s ease infinite alternate;
 }

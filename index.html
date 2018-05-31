@@ -16,8 +16,9 @@
 </head>
 <body>
     <div class="main-wrap">
-        
-        <!--<section class="section-main" >
+     <div class="content-wrap">
+            
+        <section class="section-main" id="maintop">
                 <div class="section-main-wrap">
                     <div class="section-main_inner" id="particles-js">
                         <header class="header">
@@ -28,27 +29,27 @@
                                     </div>
                                     <ul class="header-menu">
                                         <li class="header-menu_item">
-                                            <a href="#" class="header-menu_link">
+                                            <a href="#maintop" class="header-menu_link">
                                                 Главная
                                             </a>
                                         </li>
                                         <li class="header-menu_item">
-                                            <a href="#" class="header-menu_link">
+                                            <a href="#project" class="header-menu_link">
                                                 О компании
                                             </a>
                                         </li>
                                         <li class="header-menu_item">
-                                            <a href="#" class="header-menu_link">
+                                            <a href="#offer" class="header-menu_link">
                                                 Проекты
                                             </a>
                                         </li>
                                         <li class="header-menu_item">
-                                            <a href="#" class="header-menu_link">
+                                            <a href="#graph" class="header-menu_link">
                                                 Структура портфеля
                                             </a>
                                         </li>
                                         <li class="header-menu_item">
-                                            <a href="#" class="header-menu_link">
+                                            <a href="#aboutus" class="header-menu_link">
                                                 Условия работы
                                             </a>
                                         </li>
@@ -93,11 +94,11 @@
                         </div>
                     </div>
                 </div>
-        </section>-->
+        </section>
 
-        <section class="section-project">
+        <section class="section-project" id="project">
             <div class="container">
-                <div class="section-project_items  my-element">
+                <div class="section-project_items  parallax-project">
                     <div class="section-project_items-info">
                         <div class="common-title section-project_items-info_title">
                             <div class="focus">
@@ -146,7 +147,7 @@
             </div>
         </section>
 
-        <section class="section-offer">
+        <section class="section-offer" id="offer">
             <div class="container">
                     <div class="common-title section-offer-title">
                             <div class="offer-focus focus" >
@@ -161,7 +162,7 @@
                 <div class="section-offer-subtext">
                     Денежная еденница, используемая для цен товаров и услуг, для осуществления расчётов. Например: Litecoin, Dash, Monero 
                 </div>
-                <div class="section-offer_inner">
+                <div class="section-offer_inner parallax-offer">
                     <div class="section-offer-item">
                         <div class="section-offer-item_title">
                             ЭКО СИСТЕМЫ ЗАКРЫТОГО ТИПА
@@ -199,10 +200,9 @@
             </div>
         </section>
 
-        <section class="section-about-us">
+        <section class="section-about-us" id="aboutus">
                 <div class="container">
-                    <div class="section-about-us_items">
-                        <div class="section-about-us_items">
+                        <div class="section-about-us_items parallax-about-us">
                                 <div class="section-about-us_items_slider">
                                         <div class="section-about-us_items_slider-img">
                                             <img src="public/images/figure.png" alt="figure">
@@ -237,11 +237,10 @@
                                     </div>
                                 </div>
                             </div>
-                    </div>
                 </div>
             </section>
 
-            <section class="section-graph">
+            <section class="section-graph" id="graph">
                 <div class="container">
                         <div class="common-title section-graph_title">
                                 <div class="graph-focus focus" >
@@ -325,7 +324,7 @@
                 <div class="section-rewiews_subtitle">
                     Денежная еденница, используемая для цен товаров и услуг, для осуществления расчётов.
                 </div>
-                <div class="section-rewiews_slider owl-carousel" id="twoItemsSlider" >
+                <div class=" parallax-rewiews section-rewiews_slider owl-carousel" id="twoItemsSlider" >
                     <div class="section-rewiews_slider-item">
                         <div class="section-rewiews_slider-image">
                             <img src="public/images/slider_image_1.png">
@@ -524,8 +523,8 @@
                                 <li class="footer-feedback_socials_item"><a class="footer-feedback_socials_link" href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li class="footer-feedback_socials_item"><a class="footer-feedback_socials_link" href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                             </ul>
-                            <a href="#" class="btn_wrapper">
-                                <span class="text">Открыть карту</span>
+                            <a href="javascript:void(0);" class="btn_wrapper btn_close_form">
+                                <span  class="text">Открыть карту</span>
                                 <span class="line -right"></span>
                                 <span class="line -top"></span>
                                 <span class="line -left"></span>
@@ -551,11 +550,11 @@
             </div>
             <div id="map">
             </div>
-            <div class="footer-copyright">
-                Amira Capital (c) 2018. All right reserved
-            </div>
         </footer>
-        
+     </div>
+        <div class="footer-copyright">
+            Amira Capital (c) 2018. All right reserved
+        </div>
     </div>
 
 
