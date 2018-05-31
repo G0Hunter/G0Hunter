@@ -23,11 +23,11 @@ $(function() {
         $('.owl_items-num-inherit').text('/' + e.item.count);
     })
     
-    $(".parallax-rewiews").paroller({ factor: '0.1', type: 'foreground', direction: 'vertical' });
-    $(".parallax-about-us").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
-    $(".parallax-offer").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
-    $(".parallax-project").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
-    //animation on main block spiderweb
+    // $(".parallax-rewiews").paroller({ factor: '0.1', type: 'foreground', direction: 'vertical' });
+    // $(".parallax-about-us").paroller({ factor: '0.3', type: 'foreground', direction: 'vertical' });
+    // $(".parallax-offer").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
+    // $(".parallax-project").paroller({ factor: '0.2', type: 'foreground', direction: 'vertical' });
+    // //animation on main block spiderweb
     particlesJS('particles-js',
   
     {
