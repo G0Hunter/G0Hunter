@@ -3,6 +3,11 @@ $(function() {
       items: 2,
       dotsContainer: '.section-rewiews_slider_controls',
       startPosition: 2,
+      responsive: {
+        0: {items: 1},
+        1070: {items: 2}
+        
+      }
     });
     $('#oneItemSlider').owlCarousel({
       items: 1,
@@ -149,6 +154,19 @@ $(function() {
     $('#map').addClass('active');
   })
 
+<<<<<<< HEAD
+    $(".header-menu").on("click",".header-menu_link", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+    $('#menu-mobile').slicknav();
+    $('#menu').slicknav({
+      prependTo:'.mobile-wrap'
+  });
+})
+=======
   $(".header-menu").on("click",".header-menu_link", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
@@ -240,3 +258,4 @@ var render = function () {
 
 render();
 })(jQuery);
+>>>>>>> e302d69f9f2b43603f6734bd7ef6af5921856d46
