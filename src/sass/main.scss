@@ -569,6 +569,8 @@
     background-image: url(../images/slider_background.jpg); 
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     &:after{
         content: '';
         display: block;
