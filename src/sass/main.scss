@@ -137,6 +137,8 @@
 }
 .common-title {
     font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 .title-mark {
     color: #5f5a9f;
@@ -214,8 +216,57 @@
         text-align: center;
         margin-bottom: 120px;
     }
+    img {
+        width: 400px;
+        height: 300px;
+    }
 }
-
+.section-advantage {
+    background-image: url('../images/adv_bg.png');
+    padding: 120px 0;
+    background-size: cover;
+    &_title {
+        font-weight: 700;
+        text-align: center;
+    }
+    &_subtext {
+        max-width: 500px;
+        text-align: center;
+        margin: 40px auto;
+        margin-bottom: 60px;
+        color: #afb3c9;
+        line-height: 2;
+    }
+    &-items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        width: 220px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        &:nth-child(even) {
+            margin-top: 90px;
+        }
+        &:nth-child(1) {
+            background-image: url('../images/money_item.png');
+        }
+        &:nth-child(2) {
+            background-image: url('../images/item_filter.png');
+        }
+        &:nth-child(3) {
+            background-image: url('../images/item_cloud.png');
+        }
+        &:nth-child(4) {
+            background-image: url('../images/item_mining.png');
+        }
+        &:nth-child(5) {
+            background-image: url('../images/item_mobile.png');
+        }
+    }
+}
 .section-offer {
     color: #000;
     background-image: url('../images/offer_bg.png');
