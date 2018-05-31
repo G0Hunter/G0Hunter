@@ -3,6 +3,11 @@ $(function() {
       items: 2,
       dotsContainer: '.section-rewiews_slider_controls',
       startPosition: 2,
+      responsive: {
+        0: {items: 1},
+        1070: {items: 2}
+        
+      }
     });
     $('#oneItemSlider').owlCarousel({
       items: 1,
@@ -155,5 +160,8 @@ $(function() {
         top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 800);
     });
-
+    $('#menu-mobile').slicknav();
+    $('#menu').slicknav({
+      prependTo:'.mobile-wrap'
+  });
 })
