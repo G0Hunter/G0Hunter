@@ -11,18 +11,25 @@
 }
 
 .section-main {
+    
     background-color: #08071c;
+    position: relative;
     &-title {
         font-weight: 700;
-        font-size: 80px;
+        font-size: 60px;
     }
     &-divider-wrap {
         display: flex;
         justify-content: space-between;
+        margin-top: 165px;
     }
     &-divider {
         width: 50%;
         display: inline-block;
+        position: relative;
+        &_left {
+            z-index: 3;
+        }
     }
     &-subtitle {
         font-size: 30px;
@@ -30,11 +37,24 @@
         color: #9c99aa;
     }
     &-ball {
-
+        float: right;
+        position: relative;
+        z-index: 1;
+        margin-top: -50px;
     }
 }
 
+.particles-js-canvas-el {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
 .header {
+    position: relative;
+    z-index: 2;
     &-inner {
         display: flex;
         justify-content: space-between;
@@ -112,6 +132,7 @@
         &_item{
             margin: 25px 0;
         }
+        
     }
     &-feedback_socials{
         display: flex;
@@ -204,8 +225,6 @@ $slideStudios: $animation-unit * 4;
 }
 
 .amira {
-	z-index: 10;
-	font-weight: 800;
 	transform: translateX($tween);
 }
 
@@ -213,11 +232,11 @@ $slideStudios: $animation-unit * 4;
 
 // Cue all the animations when run-animation class is activated
 .run-animation {
-	animation: shrink ease-out ($animation-unit * 12) forwards ($animation-unit * 2);
+	animation: ease-out ($animation-unit * 12) forwards ($animation-unit * 2);
 	.amira {
-	transform: translateX($tween);
-	animation: slide-out-X $slideOut ease forwards;
-}
+        transform: translateX($tween);
+        animation: slide-out-X $slideOut ease forwards;
+    }
 	.capital {
 		transform: translateX(-$tween);
 		color: transparent;
