@@ -130,6 +130,10 @@ $(function() {
         "background_size": "cover"
       }
     }
-  
   );
+
+  $('.btn_close_form').on('click', function() {
+    $('.footer-inner').addClass('hidden');
+    $('#map').addClass('active');
+  })
 })

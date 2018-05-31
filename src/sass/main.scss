@@ -3,13 +3,18 @@
 .main-wrap {
     min-width: 320px;
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 .container {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
 }
-
+.content-wrap {
+    flex: 1 0 auto;
+}
 .section-main {
     position: relative;
     transform-origin: left center;
@@ -537,6 +542,8 @@
 .footer{
     display: flex;
     flex-direction: column;
+    position: relative;
+    height: 540px;
     &-inner{
         display: flex;
         background-color: #fff;
@@ -544,6 +551,15 @@
         width: 1000px;
         margin: 45px auto;
         box-shadow: 0px 0px 31.16px 6.84px rgba(0, 0, 0, 0.33);
+        transition: 0.8s;
+        &.hidden {
+            transition: 0.4s;
+            opacity: 0;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            padding: 0;
+        }
     }
     &-feedback{
         display: inline-flex;
@@ -594,6 +610,7 @@
         line-height: 65px;
         text-align: center;
         color: #08071c;
+        flex: 0 0 auto;
     }
     &-form{
         width: 55%;
@@ -628,10 +645,15 @@
         }
     }
     #map{
-        height: 550px;
+        height: 540px;
         position: absolute !important;
         width: 100%;
         z-index: -1;
+        transition: 0.8s;
+        &.active {
+            transition: 0.8s;
+            z-index: 1;
+        }
     }
 }
 
